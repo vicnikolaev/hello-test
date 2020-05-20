@@ -4,11 +4,15 @@ public class PointsCalc {
     public static boolean betterThanAverage(int[] classPoints, int yourPoints) {
         int average = 0;
 
+        if (classPoints.length == 0) {
+            return false;
+        }
+
         for (int i : classPoints) {
             average += i;
         }
 
-        if (classPoints.length == 0 || (average / classPoints.length) > yourPoints) {
+        if ((average / classPoints.length) > yourPoints) {
             return false;
         }
 

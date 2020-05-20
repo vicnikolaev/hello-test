@@ -2,15 +2,13 @@ package codewars;
 
 public class PointsCalc {
     public static boolean betterThanAverage(int[] classPoints, int yourPoints) {
-        int counter = 0;
-        int pointCounter = 0;
+        int average = 0;
 
-        for (int classPoint : classPoints) {
-            counter += classPoint;
-            pointCounter += 1;
+        for (int i : classPoints) {
+            average += i;
         }
 
-        if (classPoints.length == 0 || ((counter / pointCounter) > yourPoints)) {
+        if (classPoints.length == 0 || (average / classPoints.length) > yourPoints) {
             return false;
         }
 

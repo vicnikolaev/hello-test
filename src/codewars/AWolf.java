@@ -1,7 +1,5 @@
 package codewars;
 
-import java.util.Arrays;
-
 public class AWolf {
     public static String warnTheSheep(String[] array) {
         int size = array.length - 1;
